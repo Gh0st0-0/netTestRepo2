@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <style>
+        body{
+            align-content: center;
+            background-color: yellow;
+        }
+        .style{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav class="style">
+        <ul>
+            <li>
+                <span>Version 1.0</span>
+            </li>
+            <li>
+                <span>Version 1.1</span>
+            </li>
+            <li>
+                <span>Version 1.2</span>
+            </li>
+        </ul>
+    </nav>
+    <!-- <form action="./page2.html" method="post"> -->
+        <table>
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td>
+                    <input type="text" name="tname" id="tname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" name="tpass" id="tpass">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <!-- <input type="submit" value="GO" onmouseover="pack()"> -->
+                    <button onclick="pack()">Pack</button>
+                    <a href="page2.html">Go</a>
+                </td>
+            </tr>
+        </table>
+    <!-- </form> -->
+    
+    <script>
+        var pack = ()=>{
+            var name = document.getElementById("tname");
+            var email = document.getElementById("temail");
+            var pass = document.getElementById("tpass");
+            window.sessionStorage.setItem("Name",name.value);
+            window.sessionStorage.setItem("Email",email.value);
+            window.sessionStorage.setItem("Pass",pass.value);
+        }
+    </script>
+</body>
+</html>
